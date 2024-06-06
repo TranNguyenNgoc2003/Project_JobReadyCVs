@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>JobReadyCVs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">JobReadyCVs</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Trang chủ</a></li>
+            <li><a href="#services" onclick="toggleMenu();">Công cụ</a></li>
+            <li><a href="#work" onclick="toggleMenu();">Việc làm IT</a></li>
+            <li><a href="#Cty" onclick="toggleMenu();">Công ty IT</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Liên hệ</a></li>
+            <li><a href="#"><i class="far fa-user"></i></a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>CHỈ VỚI MỘT CLICK</h2>
+            <h3>
+                Tạo CV online định dạng chuẩn ngay dành cho Developer
+                <br>
+                Xây dựng sự nghiệp ngành IT với công cụ tạo CV online và chuẩn hóa CV của JobReadyCVs
+            </h3>
+            <a href="/createcvform" class="btn">Khám phá ngay <i class="fas fa-angle-double-right"></i></a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="heading white">
+            <h2>Dịch Vụ</h2>
+            <p>Giải pháp giúp bạn chinh phục cơ hội làm việc mơ ước.</p>
+        </div>
+        <div class="content">
+            <a class="servicesBX" href="#">
+                <span>
+                    <img src="/images/icon1.png" alt="Icon 1">
+                </span>
+                <h2>Tạo CV</h2>
+                <p>Tạo CV ấn tượng chỉ với thao tác dễ dàng.</p>
+            </a>
+            <a class="servicesBX" href="#">
+                <span>
+                    <img src="/images/icon2.png" alt="Icon 2">
+                </span>
+                <h2>Chuẩn hóa CV</h2>
+                <p>Chuyển CV hiện có thành CV chuẩn Developer.</p>
+            </a>
+            <a class="servicesBX" href="#">
+                <span>
+                    <img src="/images/icon3.png" alt="Icon 3">
+                </span>
+                <h2>Trắc nghiệm tính cách</h2>
+                <p>Khám phá sự phù hợp của bạn với công việc IT.</p>
+            </a>
+            <a class="servicesBX" href="#">
+                <span>
+                    <img src="/images/icon4.png" alt="Icon 4">
+                </span>
+                <h2>Việc làm Fresher</h2>
+                <p>Đa dạng cơ hội việc làm IT cho Fresher.</p>
+            </a>
+            <a class="servicesBX" href="#">
+                <span>
+                    <img src="/images/icon5.png" alt="Icon 5">
+                </span>
+                <h2>Blog IT</h2>
+                <p>Nâng cao kiến thức IT của bạn với Blog IT.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <div class="heading">
+            <h2>Việc Làm IT</h2>
+            <p>Công việc IT mới nhất.</p>
+        </div>
+        <div class="content jobContainer" id="jobList">
+            <% for (let i=0; i < 8 && i < jobs.length; i++) { %>
+                <% let job=jobs[i]; %>
+                    <a class="jobBx" href="#">
+                        <div class="titleJob">
+                            <div class="imgJob">
+                                <img src="<%= job.companyLogo %>" alt="">
+                            </div>
+                            <span>
+                                <%= job.title %>
+                            </span>
+                        </div>
+                        <hr style="margin: 5px; color: rgb(181, 181, 181);">
+                        <div class="JobCT">
+                            <p>
+                                <%= job.company %>
+                            </p>
+                        </div>
+                    </a>
+                    <% } %>
+        </div>
+        <div class="heading">
+            <a href="#" class="btn" target="_blank">Xem thêm</a>
+        </div>
+    </section>
+
+
+
+    <section class="Cty" id="Cty">
+        <div class="heading">
+            <h2>Công ty IT</h2>
+            <p>Công ty nổi bật.</p>
+        </div>
+
+        <div class="content">
+            <div class="CtyBx">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
+                            aria-label="First slide"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <a href="#" class="carousel-item active">
+                            <img src="/images/FPT.jpg" class="w-100 d-block" alt="First slide" />
+                            <div class="carousel-caption ">
+                                <div class="caption-left">
+                                    <img src="/images/fpt-logo.png" alt="">
+                                </div>
+                                <div class="caption-right">
+                                    <h5>FPT IS</h5>
+                                    <p>Best Companies To Work For In Asia 2023</p>
+                                    <span>
+                                        <p>10 vị trí tuyển dụng</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="carousel-item">
+                            <img src="/images/mobifone.jpg" class="w-100 d-block" alt="Second slide" />
+                            <div class="carousel-caption ">
+                                <div class="caption-left">
+                                    <img src="/images/mobifone-logo.png" alt="">
+                                </div>
+                                <div class="caption-right">
+                                    <h5>Trung Tâm Công nghệ thông tin Mobifone
+                                    </h5>
+                                    <p>Kết Nối Giá Trị - Khơi Dậy Tiềm Năng.</p>
+                                    <span>
+                                        <p>6 vị trí tuyển dụng</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="carousel-item">
+                            <img src="/images/viettet.jpg" class="w-100 d-block" alt="Third slide" />
+                            <div class="carousel-caption ">
+                                <div class="caption-left">
+                                    <img src="/images/Viettel-Logo.png" alt="">
+                                </div>
+                                <div class="caption-right">
+                                    <h5>Viettel Group</h5>
+                                    <p>Viettel - Show us your way</p>
+                                    <span>
+                                        <p>3 vị trí tuyển dụng</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Liên hệ</h2>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Thông tin liên hệ</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Địa chỉ</h3>
+                            <p>Liên Chiểu<br>Đà Nẵng<br>Việt Nam</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Số điện thoại</h3>
+                            <p>0866.123.123</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>Trannguyenngoc.2003@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Liên hệ hỗ trợ</h3>
+                    <input type="text" name="" placeholder="Họ và Tên">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Lời nhắn"></textarea>
+                    <input type="submit" value="Gửi">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

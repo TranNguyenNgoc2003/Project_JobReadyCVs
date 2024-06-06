@@ -1,0 +1,252 @@
+[{
+  "_id": {
+    "$oid": "6627fdae7bf620ca852a57fd"
+  },
+  "title": "Kỹ sư Phần mềm",
+  "company": "SmartSign",
+  "companyLogo": "https://salt.topdev.vn/qppWFtb5R5BnTRQyCbugm5Ko_sOHeEfpl5Jw3VSJlck/fit/128/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIwLzExLzA5L2NoLWt5LXMtdmluYS12aW5hY2EtbG9nby5wbmc",
+  "startDate": "2018-01-01",
+  "endDate": "2020-06-30",
+  "description": "Tham gia vào việc phát triển ứng dụng web sử dụng React.js và Node.js. Làm việc cùng đội ngũ phát triển để cung cấp các sản phẩm phần mềm chất lượng cao.",
+  "responsibilities": [
+    "Phát triển và duy trì mã nguồn cho các ứng dụng web.",
+    "Thiết kế và triển khai các tính năng mới.",
+    "Tham gia vào việc kiểm thử và sửa lỗi."
+  ],
+  "requirements": [
+    "Có kiến thức vững về React.js và Node.js.",
+    "Kỹ năng làm việc nhóm tốt.",
+    "Khả năng giải quyết vấn đề và tự học."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627fdae7bf620ca852a57fe"
+  },
+  "title": "Quản trị Hệ thống",
+  "company": "Floware",
+  "companyLogo": "https://salt.topdev.vn/bDjhSqfd-jFUTnA-zgrBMDrpdD9x4zfNb-NEBwhfiz4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzAzLzA1L2Zsb3dhcmVsb2dvLVBodW9uZ1F1eW5oLWdFSno4LnBuZw",
+  "startDate": "2015-07-01",
+  "endDate": "2017-12-31",
+  "description": "Quản lý và duy trì hạ tầng mạng của công ty. Cung cấp hỗ trợ kỹ thuật cho nhân viên và đảm bảo hoạt động suôn sẻ của hệ thống IT.",
+  "responsibilities": [
+    "Quản lý và duy trì các máy chủ, mạng và phần mềm.",
+    "Cung cấp hỗ trợ kỹ thuật cho nhân viên.",
+    "Đảm bảo bảo mật và an toàn cho hệ thống."
+  ],
+  "requirements": [
+    "Có kiến thức sâu về hệ thống mạng và máy chủ.",
+    "Kỹ năng giao tiếp tốt và khả năng làm việc độc lập.",
+    "Kinh nghiệm trong việc giải quyết sự cố và bảo mật."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627fdae7bf620ca852a57ff"
+  },
+  "title": "Chuyên viên Phân tích Dữ liệu",
+  "company": "Sungrove Tech Vietnam",
+  "companyLogo": "https://salt.topdev.vn/3YdawXAap1qD4G5gWuxHuUosjWEwu06DOWU4LFKw6Us/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDI0LzAxLzA1L1RvcERldi16NTA0MTI4ODg3NTQ0OV81ZDFlNWQwNjBlMTc0NWE3OGJmOTQwYTM0N2MzNzhlMS0xNzA0NDIwNzQ4LmpwZw",
+  "startDate": "2019-03-15",
+  "endDate": "2021-05-20",
+  "description": "Thực hiện phân tích dữ liệu và tạo báo cáo để hỗ trợ quyết định kinh doanh. Sử dụng SQL, Python và Tableau cho việc trực quan hóa dữ liệu.",
+  "responsibilities": [
+    "Phân tích dữ liệu từ các nguồn khác nhau.",
+    "Tạo và tối ưu hóa các truy vấn SQL.",
+    "Thiết kế và tạo báo cáo dữ liệu."
+  ],
+  "requirements": [
+    "Kiến thức sâu về SQL và Python.",
+    "Kỹ năng làm việc với các công cụ phân tích dữ liệu như Tableau.",
+    "Khả năng hiểu và diễn giải dữ liệu phức tạp."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff1a7bf620ca852a5802"
+  },
+  "title": "Kỹ sư Phần mềm",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2018-01-01",
+  "endDate": "2020-06-30",
+  "description": "Tham gia vào việc phát triển ứng dụng web sử dụng React.js và Node.js. Làm việc cùng đội ngũ phát triển để cung cấp các sản phẩm phần mềm chất lượng cao.",
+  "responsibilities": [
+    "Phát triển và duy trì mã nguồn cho các ứng dụng web.",
+    "Thiết kế và triển khai các tính năng mới.",
+    "Tham gia vào việc kiểm thử và sửa lỗi."
+  ],
+  "requirements": [
+    "Có kiến thức vững về React.js và Node.js.",
+    "Kỹ năng làm việc nhóm tốt.",
+    "Khả năng giải quyết vấn đề và tự học."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff1a7bf620ca852a5803"
+  },
+  "title": "Quản trị Hệ thống",
+  "company": "TopDev's Client",
+  "companyLogo": "https://salt.topdev.vn/ApnuGRn2ylZ0emFSeEvcSsVSiaZB-wrK02N48nrMNog/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDI0LzAzLzAxL1RvcERldi1TRTZxUTE4RWJBVWpjZm9ELTE3MDkyNzg3MTcucG5n",
+  "startDate": "2015-07-01",
+  "endDate": "2017-12-31",
+  "description": "Quản lý và duy trì hạ tầng mạng của công ty. Cung cấp hỗ trợ kỹ thuật cho nhân viên và đảm bảo hoạt động suôn sẻ của hệ thống IT.",
+  "responsibilities": [
+    "Quản lý và duy trì các máy chủ, mạng và phần mềm.",
+    "Cung cấp hỗ trợ kỹ thuật cho nhân viên.",
+    "Đảm bảo bảo mật và an toàn cho hệ thống."
+  ],
+  "requirements": [
+    "Có kiến thức sâu về hệ thống mạng và máy chủ.",
+    "Kỹ năng giao tiếp tốt và khả năng làm việc độc lập.",
+    "Kinh nghiệm trong việc giải quyết sự cố và bảo mật."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff1a7bf620ca852a5804"
+  },
+  "title": "Chuyên viên Phân tích Dữ liệu",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2019-03-15",
+  "endDate": "2021-05-20",
+  "description": "Thực hiện phân tích dữ liệu và tạo báo cáo để hỗ trợ quyết định kinh doanh. Sử dụng SQL, Python và Tableau cho việc trực quan hóa dữ liệu.",
+  "responsibilities": [
+    "Phân tích dữ liệu từ các nguồn khác nhau.",
+    "Tạo và tối ưu hóa các truy vấn SQL.",
+    "Thiết kế và tạo báo cáo dữ liệu."
+  ],
+  "requirements": [
+    "Kiến thức sâu về SQL và Python.",
+    "Kỹ năng làm việc với các công cụ phân tích dữ liệu như Tableau.",
+    "Khả năng hiểu và diễn giải dữ liệu phức tạp."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff217bf620ca852a5806"
+  },
+  "title": "Kỹ sư Phần mềm",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2018-01-01",
+  "endDate": "2020-06-30",
+  "description": "Tham gia vào việc phát triển ứng dụng web sử dụng React.js và Node.js. Làm việc cùng đội ngũ phát triển để cung cấp các sản phẩm phần mềm chất lượng cao.",
+  "responsibilities": [
+    "Phát triển và duy trì mã nguồn cho các ứng dụng web.",
+    "Thiết kế và triển khai các tính năng mới.",
+    "Tham gia vào việc kiểm thử và sửa lỗi."
+  ],
+  "requirements": [
+    "Có kiến thức vững về React.js và Node.js.",
+    "Kỹ năng làm việc nhóm tốt.",
+    "Khả năng giải quyết vấn đề và tự học."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff217bf620ca852a5807"
+  },
+  "title": "Quản trị Hệ thống",
+  "company": "TopDev's Client",
+  "companyLogo": "https://salt.topdev.vn/ApnuGRn2ylZ0emFSeEvcSsVSiaZB-wrK02N48nrMNog/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDI0LzAzLzAxL1RvcERldi1TRTZxUTE4RWJBVWpjZm9ELTE3MDkyNzg3MTcucG5n",
+  "startDate": "2015-07-01",
+  "endDate": "2017-12-31",
+  "description": "Quản lý và duy trì hạ tầng mạng của công ty. Cung cấp hỗ trợ kỹ thuật cho nhân viên và đảm bảo hoạt động suôn sẻ của hệ thống IT.",
+  "responsibilities": [
+    "Quản lý và duy trì các máy chủ, mạng và phần mềm.",
+    "Cung cấp hỗ trợ kỹ thuật cho nhân viên.",
+    "Đảm bảo bảo mật và an toàn cho hệ thống."
+  ],
+  "requirements": [
+    "Có kiến thức sâu về hệ thống mạng và máy chủ.",
+    "Kỹ năng giao tiếp tốt và khả năng làm việc độc lập.",
+    "Kinh nghiệm trong việc giải quyết sự cố và bảo mật."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff217bf620ca852a5808"
+  },
+  "title": "Chuyên viên Phân tích Dữ liệu",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2019-03-15",
+  "endDate": "2021-05-20",
+  "description": "Thực hiện phân tích dữ liệu và tạo báo cáo để hỗ trợ quyết định kinh doanh. Sử dụng SQL, Python và Tableau cho việc trực quan hóa dữ liệu.",
+  "responsibilities": [
+    "Phân tích dữ liệu từ các nguồn khác nhau.",
+    "Tạo và tối ưu hóa các truy vấn SQL.",
+    "Thiết kế và tạo báo cáo dữ liệu."
+  ],
+  "requirements": [
+    "Kiến thức sâu về SQL và Python.",
+    "Kỹ năng làm việc với các công cụ phân tích dữ liệu như Tableau.",
+    "Khả năng hiểu và diễn giải dữ liệu phức tạp."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff307bf620ca852a580a"
+  },
+  "title": "Kỹ sư Phần mềm",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2018-01-01",
+  "endDate": "2020-06-30",
+  "description": "Tham gia vào việc phát triển ứng dụng web sử dụng React.js và Node.js. Làm việc cùng đội ngũ phát triển để cung cấp các sản phẩm phần mềm chất lượng cao.",
+  "responsibilities": [
+    "Phát triển và duy trì mã nguồn cho các ứng dụng web.",
+    "Thiết kế và triển khai các tính năng mới.",
+    "Tham gia vào việc kiểm thử và sửa lỗi."
+  ],
+  "requirements": [
+    "Có kiến thức vững về React.js và Node.js.",
+    "Kỹ năng làm việc nhóm tốt.",
+    "Khả năng giải quyết vấn đề và tự học."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff307bf620ca852a580b"
+  },
+  "title": "Quản trị Hệ thống",
+  "company": "TopDev's Client",
+  "companyLogo": "https://salt.topdev.vn/ApnuGRn2ylZ0emFSeEvcSsVSiaZB-wrK02N48nrMNog/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDI0LzAzLzAxL1RvcERldi1TRTZxUTE4RWJBVWpjZm9ELTE3MDkyNzg3MTcucG5n",
+  "startDate": "2015-07-01",
+  "endDate": "2017-12-31",
+  "description": "Quản lý và duy trì hạ tầng mạng của công ty. Cung cấp hỗ trợ kỹ thuật cho nhân viên và đảm bảo hoạt động suôn sẻ của hệ thống IT.",
+  "responsibilities": [
+    "Quản lý và duy trì các máy chủ, mạng và phần mềm.",
+    "Cung cấp hỗ trợ kỹ thuật cho nhân viên.",
+    "Đảm bảo bảo mật và an toàn cho hệ thống."
+  ],
+  "requirements": [
+    "Có kiến thức sâu về hệ thống mạng và máy chủ.",
+    "Kỹ năng giao tiếp tốt và khả năng làm việc độc lập.",
+    "Kinh nghiệm trong việc giải quyết sự cố và bảo mật."
+  ]
+},
+{
+  "_id": {
+    "$oid": "6627ff307bf620ca852a580c"
+  },
+  "title": "Chuyên viên Phân tích Dữ liệu",
+  "company": "DTN E-COMMERCE SOFTWARE COMPANY LIMITED",
+  "companyLogo": "https://salt.topdev.vn/Et3us9Nryh9ulKLoYKZNNRq57irLthwoMEW4CMkj1X4/fit/96/1000/ce/1/aHR0cHM6Ly9hc3NldHMudG9wZGV2LnZuL2ltYWdlcy8yMDIxLzA2LzE1L0RUTi1Mb2dvLXk3d1JULnBuZw",
+  "startDate": "2019-03-15",
+  "endDate": "2021-05-20",
+  "description": "Thực hiện phân tích dữ liệu và tạo báo cáo để hỗ trợ quyết định kinh doanh. Sử dụng SQL, Python và Tableau cho việc trực quan hóa dữ liệu.",
+  "responsibilities": [
+    "Phân tích dữ liệu từ các nguồn khác nhau.",
+    "Tạo và tối ưu hóa các truy vấn SQL.",
+    "Thiết kế và tạo báo cáo dữ liệu."
+  ],
+  "requirements": [
+    "Kiến thức sâu về SQL và Python.",
+    "Kỹ năng làm việc với các công cụ phân tích dữ liệu như Tableau.",
+    "Khả năng hiểu và diễn giải dữ liệu phức tạp."
+  ]
+}]
