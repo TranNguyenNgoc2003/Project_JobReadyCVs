@@ -2,6 +2,51 @@ var express = require('express');
 var router = express.Router();
 var Job = require('./../db/models/Jobs');
 var CV = require('./../db/models/cvModel');
+var User = require('./../db/models/User');
+
+//router sign in
+router.get('/', function (req, res) {
+    res.render('sign_in');
+});
+
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const user = await User.findOne({ email });
+        if (!user || user.password !== password) {
+            return res.render('sign_in', { error: 'Email hoặc mật khẩu không đúng.' });
+        }
+        res.redirect('/home');
+    } catch (error) {
+        console.error('Lỗi khi đăng nhập:', error);
+        res.status(500).send('Đã xảy ra lỗi khi đăng nhập.');
+    }
+});
+
+//router sign up
+router.get('/sign_up', (req, res) => {
+    res.render('sign_up');
+});
+
+router.post('/register', async (req, res) => {
+    const { name, email, password, confirm_password } = req.body;
+
+    try {
+        if (password !== confirm_password) {
+            return res.render('sign_up', { error: 'Mật khẩu xác nhận không khớp.' });
+        }
+
+        const newUser = new User({ name, email, password });
+
+        await newUser.save();
+
+        res.redirect('/');
+
+    } catch (error) {
+        console.error('Lỗi khi đăng ký người dùng:', error);
+        return res.render('sign_up', { error: 'Đã xảy ra lỗi khi đăng ký người dùng. Vui lòng thử lại sau.' });
+    }
+});
 
 //router home
 router.get('/home', function (req, res) {
@@ -16,7 +61,6 @@ router.get('/home', function (req, res) {
             throw err;
         });
 });
-
 
 //router create cv and show cv
 router.get('/createcvform', function (req, res) {
