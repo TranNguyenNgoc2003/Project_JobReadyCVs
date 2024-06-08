@@ -5,9 +5,9 @@ const Job = require('./../db/models/Jobs');
 const CV = require('./../db/models/cvModel');
 const User = require('./../db/models/User');
 
-// Add session middleware
+// Add session
 router.use(session({
-    secret: 'your_secret_key', // Secret key for session
+    secret: 'your_secret_key',
     resave: false,
     saveUninitialized: true
 }));
