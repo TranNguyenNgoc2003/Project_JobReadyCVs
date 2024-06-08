@@ -1,8 +1,16 @@
-var express = require('express');
-var router = express.Router();
-var Job = require('./../db/models/Jobs');
-var CV = require('./../db/models/cvModel');
-var User = require('./../db/models/User');
+const express = require('express');
+const router = express.Router();
+const session = require('express-session');
+const Job = require('./../db/models/Jobs');
+const CV = require('./../db/models/cvModel');
+const User = require('./../db/models/User');
+
+// Add session middleware
+router.use(session({
+    secret: 'your_secret_key', // Secret key for session
+    resave: false,
+    saveUninitialized: true
+}));
 
 //router sign in
 router.get('/', function (req, res) {
@@ -16,6 +24,8 @@ router.post('/login', async (req, res) => {
         if (!user || user.password !== password) {
             return res.render('sign_in', { error: 'Email hoặc mật khẩu không đúng.' });
         }
+        // Save user information in session
+        req.session.user = user;
         res.redirect('/home');
     } catch (error) {
         console.error('Lỗi khi đăng nhập:', error);
@@ -48,6 +58,7 @@ router.post('/register', async (req, res) => {
     }
 });
 
+
 //router home
 router.get('/home', function (req, res) {
     Job.find({})
@@ -61,6 +72,7 @@ router.get('/home', function (req, res) {
             throw err;
         });
 });
+
 
 //router create cv and show cv
 router.get('/createcvform', function (req, res) {
@@ -95,6 +107,57 @@ router.get('/showcv/:id', async (req, res) => {
         });
     } catch (error) {
         res.status(500).send('Lỗi khi tải CV: ' + error.message);
+    }
+});
+
+//router user
+router.get('/user', function (req, res) {
+    if (!req.session.user) {
+        return res.redirect('/');
+    }
+
+    const user = req.session.user;
+
+    res.render('user', { user: user });
+});
+
+//router edit user
+router.get('/edit_user', function (req, res) {
+    if (!req.session.user) {
+        return res.redirect('/');
+    }
+
+    const user = req.session.user;
+
+    res.render('edit_user', { user: user });
+});
+
+router.post('/update_user', async (req, res) => {
+    if (!req.session.user) {
+        return res.redirect('/');
+    }
+
+    const { name, dateOfBirth, gender, address, phoneNumber, email } = req.body;
+    const userId = req.session.user._id;
+
+    try {
+        const user = await User.findById(userId);
+
+        user.name = name;
+        user.dateOfBirth = dateOfBirth;
+        user.gender = gender;
+        user.address = address;
+        user.phoneNumber = phoneNumber;
+        user.email = email;
+
+        await user.save();
+
+        req.session.user = user;
+
+        res.redirect('/user');
+    } catch (error) {
+        console.error('Lỗi khi cập nhật thông tin người dùng:', error);
+        res.status(500).send('Đã xảy ra lỗi khi cập nhật thông tin người dùng.');
     }
 });
 module.exports = router;
