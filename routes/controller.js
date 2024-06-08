@@ -137,7 +137,7 @@ router.post('/update_user', async (req, res) => {
         return res.redirect('/');
     }
 
-    const { name, dateOfBirth, gender, address, phoneNumber, email } = req.body;
+    const { name, dateOfBirth, gender, address, phoneNumber, password } = req.body;
     const userId = req.session.user._id;
 
     try {
@@ -148,7 +148,7 @@ router.post('/update_user', async (req, res) => {
         user.gender = gender;
         user.address = address;
         user.phoneNumber = phoneNumber;
-        user.email = email;
+        user.password = password;
 
         await user.save();
 
