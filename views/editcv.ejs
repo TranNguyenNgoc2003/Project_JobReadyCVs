@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/edit_cv.css">
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">JobReadyCVs</a>
+        <ul class="menu">
+            <li><a href="/home">Trang chủ</a></li>
+            <li><a href="/home#services">Công cụ</a></li>
+            <li><a href="/home#work">Việc làm IT</a></li>
+            <li><a href="/home#Cty">Công ty IT</a></li>
+            <li><a href="/home#contact">Liên hệ</a></li>
+            <li><a href="/user"><i class="far fa-user"></i></a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+
+        </div>
+    </section>
+    <section class="formcv">
+        <form action="/updatecv/<%= cv._id %>" method="post"  class="cv-form">
+            <div class="label_form_1">
+                <div class="form_name_jobs">
+                    <input type="text" name="name" value="<%= cv.name %>" required><br><br>
+                    <input type="text" name="job_position" value="<%= cv.job_position %>" required><br><br>
+                </div>
+
+                <div class="form_info">
+                    <div class="input_info" style="padding-top: 20px;">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <input type="text" name="phone" value="<%= cv.phone %>" required><br><br>
+                    </div>
+
+                    <div class="input_info">
+                        <div class="icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <input type="email" name="email" value="<%= cv.email %>" required><br><br>
+                    </div>
+
+                    <div class="input_info">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <input type="text" name="address" value="<%= cv.address %>" required><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="label_form_2">
+                <div class="titleForm">
+                    <span>
+                        <label for="career_objective">Mục tiêu nghề nghiệp</label>
+                        <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                    </span>
+                    <hr style="width: 75%; margin-top:20px;">
+                </div>
+                <textarea name="career_objective" rows="4" required><%= cv.career_objective %></textarea><br><br>
+
+                <div class="titleForm">
+                    <span>
+                        <label for="work_experience">Kinh nghiệm làm việc</label>
+                        <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                    </span>
+                    <hr style="width: 75%; margin-top:20px;">
+                </div>
+                <textarea name="work_experience" rows="4" required><%= cv.work_experience %></textarea></textarea><br><br>
+
+                <div class="titleForm">
+                    <span>
+                        <label for="projects">Dự án</label>
+                        <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                    </span>
+                    <hr style="width: 92%; margin-top:20px;">
+                </div>
+                <textarea name="projects" rows="4" required><%= cv.projects %></textarea></textarea><br><br>
+            </div>
+
+            <div class="label_form_3">
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="education">Học vấn</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 80%; margin-top:20px;">
+                    </div>
+                    <textarea name="education" rows="4" required><%= cv.education %></textarea></textarea><br><br>
+                </span>
+
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="skills">Các kỹ năng</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 71%; margin-top:20px;">
+                    </div>
+                    <textarea name="skills" rows="4" required><%= cv.skills %></textarea></textarea><br><br>
+                </span>
+            </div>
+
+            <div class="label_form_4">
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="awards">Danh hiệu và giải thưởng</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 11%; margin-top:20px;">
+                    </div>
+                    <textarea name="awards" rows="4" required><%= cv.awards %></textarea></textarea><br><br>
+                </span>
+
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="certificates">Chứng chỉ</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 62%; margin-top:20px;">
+                    </div>
+                    <textarea name="certificates" rows="4" required><%= cv.certificates %></textarea></textarea><br><br>
+                </span>
+
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="references">Người giới thiệu</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 41%; margin-top:20px;">
+                    </div>
+                    <textarea name="references" rows="4" required><%= cv.references %></textarea></textarea><br><br>
+                </span>
+            </div>
+
+            <div class="label_form_5">
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="activities">Hoạt động</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 61%; margin-top:20px;">
+                    </div>
+                    <textarea name="activities" rows="4" required><%= cv.activities %></textarea><br><br>
+                </span>
+
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="hobbies">Sở thích</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 68%; margin-top:20px;">
+                    </div>
+                    <textarea name="hobbies" rows="4" required><%= cv.hobbies %></textarea><br><br>
+                </span>
+
+                <span class="table_form">
+                    <div class="titleForm">
+                        <span>
+                            <label for="additional_info">Thông tin thêm</label>
+                            <hr style="width: 70px; height: 3px; margin-top: 0px;">
+                        </span>
+                        <hr style="width: 45%; margin-top:20px;">
+                    </div>
+                    <textarea name="additional_info" rows="4" required><%= cv.additional_info %></textarea></textarea><br><br>
+                </span>
+            </div>
+            <br><br>
+        
+            <div class="submit-button">
+                <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+            </div>
+        </form>
+    </section>    
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Liên hệ</h2>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Thông tin liên hệ</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Địa chỉ</h3>
+                            <p>Liên Chiểu<br>Đà Nẵng<br>Việt Nam</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Số điện thoại</h3>
+                            <p>0866.123.123</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-envelope-open"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>Trannguyenngoc.2003@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Liên hệ hỗ trợ</h3>
+                    <input type="text" name="" placeholder="Họ và Tên">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Lời nhắn"></textarea>
+                    <input type="submit" value="Gửi">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
