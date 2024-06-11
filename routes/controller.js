@@ -4,6 +4,7 @@ const session = require('express-session');
 const Job = require('./../db/models/Jobs');
 const CV = require('./../db/models/cvModel');
 const User = require('./../db/models/User');
+const Admin = require('./../db/models/admin');
 
 // Add session middleware
 router.use(session({
@@ -243,6 +244,138 @@ router.get('/logout', function (req, res) {
         }
         res.redirect('/');
     });
+});
+// -------------------------------------------------------------------
+// admin 
+// Admin login routes
+router.get('/admin', function (req, res) {
+    res.render('adminLogin');
+});
+
+router.post('/Adminform', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const admin = await Admin.findOne({ email });
+        if (!admin || admin.password !== password) {
+            return res.render('adminLogin', { error: 'Email hoặc mật khẩu không đúng.' });
+        }
+        req.session.admin = admin;
+        res.render('adminHome');
+    } catch (error) {
+        console.error('Lỗi khi đăng nhập:', error);
+        res.status(500).send('Đã xảy ra lỗi khi đăng nhập.');
+    }
+});
+
+router.get('/adminHome', function (req, res) {
+    res.render('adminHome');
+});
+
+// Add Job routes
+router.get('/add_job', (req, res) => {
+    res.render('add_job');
+});
+
+router.post('/submit_add_job', (req, res) => {
+    const newJob = new Job({
+        title: req.body.title,
+        company: req.body.company,
+        companyLogo: req.body.companyLogo,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+        description: req.body.description,
+        responsibilities: req.body.responsibilities.split('\n'),
+        requirements: req.body.requirements.split('\n')
+    });
+
+    newJob.save()
+        .then(doc => {
+            res.redirect('/add_job');
+        })
+        .catch(err => {
+            console.error('Error: ', err);
+            res.status(500).send('Internal Server Error');
+        });
+});
+
+// Update Job routes
+router.get('/list_job', async (req, res) => {
+    try {
+        const jobs = await Job.find({});
+        res.render('list_job', { jobs });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+router.get('/edit_job/:jobId', async (req, res) => {
+    try {
+        const job = await Job.findById(req.params.jobId);
+        if (!job) {
+            return res.status(404).send('Job not found');
+        }
+        res.render('edit_job', { job });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+/**
+ * Submit Edit Job form
+ */
+router.post('/submit_edit_job/:jobId', async (req, res) => {
+    try {
+        const job = await Job.findById(req.params.jobId);
+        if (!job) {
+            return res.status(404).send('Job not found');
+        }
+
+        job.title = req.body.title;
+        job.company = req.body.company;
+        job.companyLogo = req.body.companyLogo;
+        job.startDate = new Date(req.body.startDate);
+        job.endDate = req.body.endDate ? new Date(req.body.endDate) : null;
+        job.description = req.body.description;
+        job.responsibilities = req.body.responsibilities.split('\n');
+        job.requirements = req.body.requirements.split('\n');
+
+        await job.save();
+        res.redirect('/list_job');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Show Job route
+router.get('/show_job/:jobId', async (req, res) => {
+    try {
+        const job = await Job.findById(req.params.jobId);
+        if (!job) {
+            return res.status(404).send('Job not found');
+        }
+        res.render('show_job', { job });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Delete Job route
+router.post('/delete_job/:jobId', async (req, res) => {
+    const jobId = req.params.jobId;
+    try {
+        const job = await Job.findByIdAndDelete(jobId);
+        if (!job) {
+            return res.status(404).send('Job not found');
+        }
+        res.redirect('/list_job');
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 
 module.exports = router;
