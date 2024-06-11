@@ -161,7 +161,7 @@ body {
 #sidebar .side-menu.top li a:hover {
 	color: var(--blue);
 }
-#sidebar .side-menu li a .bx {
+#sidebar .side-menu li a i {
 	min-width: calc(60px  - ((4px + 6px) * 2));
 	display: flex;
 	justify-content: center;
